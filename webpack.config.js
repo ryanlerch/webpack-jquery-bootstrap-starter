@@ -8,8 +8,8 @@ module.exports = {
   },
 
   output: {
-    path: __dirname,
-    filename: 'bundle.js'
+    path: './dist',
+    filename: '[name].js'
   },
 
   resolve: {
@@ -36,7 +36,7 @@ module.exports = {
 
   plugins: [
     new webpack.NoErrorsPlugin(),
-    new ExtractTextPlugin('bundle.css'),
+    new ExtractTextPlugin('[name].css'),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
